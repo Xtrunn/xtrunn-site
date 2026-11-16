@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10110f">
+  <meta name="description" content="Xtrunn crée des logiciels et outils numériques indépendants, utiles et simples à utiliser.">
+  <title>Proposer un projet — Xtrunn</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/appearance.js" defer></script>
+  <script src="assets/portal.js" defer></script>
+  <script src="assets/submission.js" defer></script>
+</head>
+<body>
+  <header class="topbar wrap">
+    <a class="wordmark" href="./" aria-label="Xtrunn, accueil"><img src="assets/mark.svg" alt="" width="30" height="30"><span>xtrunn</span></a>
+    <nav aria-label="Navigation principale">
+      <details class="nav-projects">
+        <summary>Projets <span aria-hidden="true">⌄</span></summary>
+        <div class="nav-projects-panel">
+          <a href="index.html#projets">Voir les projets</a>
+          <a href="proposer.html">Proposer un projet</a>
+        </div>
+      </details>
+      <a href="privacy.html">Confidentialité</a>
+      <a class="nav-contact" href="https://github.com/Xtrunn/xtrunn-site/issues">Contact <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main class="submission wrap">
+    <a class="back-link" href="index.html#projets">← Tous les projets</a>
+    <h1>Proposer un projet</h1>
+    <p>Préparez votre fiche, puis envoyez-la à Xtrunn pour validation. L’envoi se fait sur GitHub et nécessite un compte. La proposition sera visible publiquement.</p>
+    <div class="submission-layout">
+      <form id="project-form">
+        <fieldset>
+          <legend>Présentation</legend>
+          <div class="form-columns">
+            <label>Nom du projet<input name="name" required maxlength="60"></label>
+            <label>Éditeur ou créateur<input name="publisher" required maxlength="60"></label>
+            <label>Catégorie<select name="category">
+              <option value="software">Logiciel</option><option value="extension">Extension navigateur</option>
+              <option value="utility">Utilitaire</option><option value="game">Jeu</option>
+              <option value="app">Application</option><option value="other">Autre</option>
+            </select></label>
+            <label>Identifiant de la fiche<input name="slug" required pattern="[a-z0-9]+(-[a-z0-9]+)*" maxlength="60" title="Lettres minuscules, chiffres et tirets" placeholder="mon-projet"></label>
+          </div>
+          <label>Résumé<input name="summary" required maxlength="140"></label>
+          <label>Description<textarea name="description" required maxlength="3000" rows="4"></textarea></label>
+          <div class="form-columns">
+            <label>Logo (PNG, WebP ou JPEG)<input name="logo" type="file" required accept=".png,.webp,.jpg,.jpeg"></label>
+            <label>Couleur de la tuile<input name="color" type="color" value="#a996f5"></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Disponibilité</legend>
+          <div class="form-columns">
+            <label>Statut<select name="status"><option value="upcoming">En préparation</option><option value="available">Disponible</option></select></label>
+            <label>Tarif<input name="pricing" required value="Gratuit" maxlength="60"></label>
+          </div>
+          <label>Détails du tarif <span>(facultatif)</span><textarea name="pricingDetails" maxlength="600" rows="2"></textarea></label>
+          <div id="download-fields" hidden>
+            <div id="download-list"></div>
+            <button type="button" class="form-secondary" id="add-download">+ Ajouter un lien</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Fonctionnalités <span>(facultatif)</span></legend>
+          <div id="feature-list"></div>
+          <button type="button" class="form-secondary" id="add-feature">+ Ajouter une fonctionnalité</button>
+        </fieldset>
+        <div class="submission-actions">
+          <button type="submit" class="download-button" value="submit">Préparer l’envoi sur GitHub ↗</button>
+          <button type="submit" class="form-secondary" value="export">Télécharger la fiche JSON</button>
+        </div>
+        <p id="submission-status" role="status"></p>
+      </form>
+
+      <aside class="submission-preview" aria-labelledby="preview-heading">
+        <h2 id="preview-heading">Aperçu</h2>
+        <article class="catalog-card preview-card">
+          <div class="card-art"><img id="preview-logo" hidden alt=""><span id="preview-placeholder" aria-hidden="true">+</span></div>
+          <div class="card-copy">
+            <div class="card-title"><h2 id="preview-name">Nom du projet</h2></div>
+            <p id="preview-category">Logiciel</p>
+            <span class="card-badge" id="preview-status">En préparation</span>
+          </div>
+        </article>
+        <p id="preview-summary"></p>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer wrap">
+    <a class="wordmark footer-mark" href="./"><img src="assets/mark.svg" alt="" width="24" height="24"><span>xtrunn</span></a>
+    <span>Logiciels indépendants, conçus avec soin.</span>
+    <div><a href="privacy.html">Confidentialité</a><a href="https://github.com/Xtrunn/xtrunn-site/issues">Contact</a></div>
+  </footer>
+</body>
+</html>

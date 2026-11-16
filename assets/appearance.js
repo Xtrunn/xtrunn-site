@@ -134,25 +134,6 @@ if (blackHole) {
   ambient.append(canvas);
   document.body.prepend(ambient);
   startStarfield(canvas);
-
-  // Preserve the native anchor for history, keyboard navigation and deep links.
-  const hero = document.querySelector('.hero');
-  if ('IntersectionObserver' in window) {
-    let wasInView = null;
-    const observer = new IntersectionObserver(([entry]) => {
-      const inView = entry.intersectionRatio >= 0.55;
-      if (inView && wasInView === false && !blackHole.getAnimations?.().length) pulse();
-      wasInView = inView;
-    }, { threshold: 0.55 });
-    observer.observe(hero);
-  }
-
-  for (const link of document.querySelectorAll('a[href="#projets"]')) {
-    link.addEventListener('click', event => {
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      if (!blackHole.getAnimations?.().length) pulse();
-    });
-  }
 }
 
 function startStarfield(canvas) {

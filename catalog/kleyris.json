@@ -1,0 +1,19 @@
+{
+  "id": "kleyris",
+  "name": "Kleyris",
+  "category": "extension",
+  "publisher": "Xtrunn",
+  "summary": "Vos clés API d’IA, organisées et à portée de main.",
+  "description": "Kleyris regroupe les clés API de vos fournisseurs d’IA dans votre navigateur. Retrouvez rapidement la bonne clé et copiez-la en un clic.",
+  "icon": "assets/projects/kleyris.png",
+  "color": "#a996f5",
+  "status": "upcoming",
+  "pricing": "Gratuit · Pro en option",
+  "pricingDetails": "La version gratuite permet de gérer jusqu’à cinq clés. Kleyris Pro déverrouille un nombre illimité de clés par achat unique.",
+  "features": [
+    {"title": "Tout retrouver", "text": "Associez chaque clé à son fournisseur, son compte, son projet et sa console."},
+    {"title": "Ranger à votre façon", "text": "Classez vos clés dans des dossiers et sous-dossiers, puis recherchez-les rapidement."},
+    {"title": "Garder la main", "text": "Les clés restent dans le stockage local du navigateur. Une sauvegarde chiffrée permet de les transférer."}
+  ],
+  "downloads": []
+}

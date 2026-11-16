@@ -1,3 +1,4 @@
+<!-- Généré par build_catalog.py. Modifier le catalogue ou les modèles. -->
 <!doctype html>
 <html lang="fr">
 <head>
@@ -9,48 +10,56 @@
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
   <script src="assets/appearance.js" defer></script>
+  <script src="assets/portal.js" defer></script>
+  <script src="assets/catalog.js" defer></script>
 </head>
-<body>
+<body class="catalog-page">
+  <div class="portal-scene hero-space" aria-hidden="true">
+    <div class="black-hole">
+      <div class="bh-disk"></div>
+      <div class="bh-void"></div>
+      <div class="bh-ring"></div>
+    </div>
+  </div>
+  <div class="approach-screen">
   <header class="topbar wrap">
     <a class="wordmark" href="./" aria-label="Xtrunn, accueil"><img src="assets/mark.svg" alt="" width="30" height="30"><span>xtrunn</span></a>
     <nav aria-label="Navigation principale">
-      <a href="#projets">Projets</a>
+      <details class="nav-projects">
+        <summary>Projets <span aria-hidden="true">⌄</span></summary>
+        <div class="nav-projects-panel">
+          <a href="#projets">Voir les projets</a>
+          <a href="proposer.html">Proposer un projet</a>
+        </div>
+      </details>
       <a href="privacy.html">Confidentialité</a>
       <a class="nav-contact" href="https://github.com/Xtrunn/xtrunn-site/issues">Contact <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main>
-    <section class="hero wrap">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> Studio indépendant</p>
-        <h1>Des outils numériques<br><span>qui vont droit au but.</span></h1>
-        <p class="hero-description">Xtrunn imagine et développe des logiciels, extensions et petits utilitaires pour simplifier des tâches du quotidien numérique.</p>
-        <a class="text-link" href="#projets">Découvrir les projets <span aria-hidden="true">↓</span></a>
-      </div>
-      <div class="hero-space" aria-hidden="true">
-        <div class="black-hole">
-          <div class="bh-disk"></div>
-          <div class="bh-void"></div>
-          <div class="bh-ring"></div>
-        </div>
-      </div>
+    <section class="home-intro wrap">
+      <p class="eyebrow"><span class="status-dot"></span> Studio indépendant</p>
+      <h1>Des outils numériques<br><span>qui vont droit au but.</span></h1>
+      <p class="hero-description">Xtrunn imagine et développe des logiciels, extensions et petits utilitaires pour simplifier des tâches du quotidien numérique.</p>
+      <a class="text-link" href="#projets">Découvrir les projets <span aria-hidden="true">↓</span></a>
     </section>
+    <section class="catalog wrap" id="projets" aria-labelledby="catalog-title">
+      <div class="catalog-heading"><h2 id="catalog-title">Projets</h2></div>
 
-    <section class="projects wrap" id="projets">
-      <div class="section-heading">
-        <h2>Projets</h2>
-      </div>
-      <article class="project-card">
-        <a class="project-mark" href="products/kleyris.html" aria-label="Découvrir Kleyris"><span>K</span><i></i></a>
-        <div class="project-info">
-          <div class="project-meta"><span>Extension navigateur</span><span class="pill">En préparation</span></div>
-          <h3>Kleyris</h3>
-          <p>Retrouvez, organisez et copiez vos clés API d’IA depuis votre navigateur.</p>
+      <section class="catalog-group" data-category="extension" aria-labelledby="category-extension">
+        <h3 id="category-extension">Extensions</h3>
+        <div class="project-grid">
+          <a class="catalog-card" href="products/kleyris.html" style="--project-color: #a996f5">
+            <div class="card-art"><img src="assets/projects/kleyris.png" width="112" height="112" alt=""></div>
+            <div class="card-copy">
+              <div class="card-title"><h4>Kleyris</h4><span aria-hidden="true">↗</span></div>
+              <p>Extension navigateur</p>
+              <span class="card-badge">En préparation</span>
+            </div>
+          </a>
         </div>
-        <a class="arrow-link" href="products/kleyris.html" aria-label="Découvrir Kleyris">↗</a>
-      </article>
-      <p class="future-note">D’autres projets sont en cours d’exploration.</p>
+      </section>
     </section>
   </main>
 
@@ -59,5 +68,6 @@
     <span>Logiciels indépendants, conçus avec soin.</span>
     <div><a href="privacy.html">Confidentialité</a><a href="https://github.com/Xtrunn/xtrunn-site/issues">Contact</a></div>
   </footer>
+  </div>
 </body>
 </html>

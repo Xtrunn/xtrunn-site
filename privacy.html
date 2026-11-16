@@ -9,11 +9,18 @@
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
   <script src="assets/appearance.js" defer></script>
+  <script src="assets/portal.js" defer></script>
 </head>
 <body>
   <header class="topbar wrap">
     <a class="wordmark" href="./" aria-label="Xtrunn, accueil"><img src="assets/mark.svg" alt="" width="30" height="30"><span>xtrunn</span></a>
-    <nav aria-label="Navigation principale"><a href="index.html#projets">Projets</a><a class="nav-contact" href="https://github.com/Xtrunn/xtrunn-site/issues">Contact <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="Navigation principale"><details class="nav-projects">
+        <summary>Projets <span aria-hidden="true">⌄</span></summary>
+        <div class="nav-projects-panel">
+          <a href="index.html#projets">Voir les projets</a>
+          <a href="proposer.html">Proposer un projet</a>
+        </div>
+      </details><a class="nav-contact" href="https://github.com/Xtrunn/xtrunn-site/issues">Contact <span aria-hidden="true">↗</span></a></nav>
   </header>
   <main class="policy wrap">
     <a class="back-link" href="./">← Accueil</a>
