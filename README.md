@@ -2,6 +2,8 @@
 
 Catalogue de logiciels, extensions, utilitaires, jeux et applications. Le site est statique et hébergé sur GitHub Pages.
 
+[Voir le site Xtrunn](https://xtrunn.github.io/xtrunn-site/)
+
 ## Proposer un projet depuis le site
 
 Ouvrez **Projets → Proposer un projet**. Le formulaire affiche un aperçu et prépare la fiche JSON. Le bouton **Préparer l’envoi sur GitHub** ouvre une proposition publique à compléter avec le logo. Connectez-vous à GitHub et envoyez-la pour que Xtrunn la vérifie. Le bouton **Télécharger la fiche JSON** permet de récupérer la fiche directement.
